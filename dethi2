@@ -1,0 +1,56 @@
+Sự miêu tả
+Có N chuỗi chỉ bao gồm bảng chữ cái tiếng Anh viết hoa (biểu thị các chuỗi này là S[1], S[2], ..., S[N]).
+
+Reverse(T) được định nghĩa là chuỗi đảo ngược của một chuỗi tùy ý, T (rõ ràng, đối với bất kỳ chuỗi nào T, Reverse(Reverse(T)) = T).
+
+Ví dụ: Reverse("ABC") = "CBA".
+
+Đối với mỗi N chuỗi này, bạn có thể quyết định chọn Reverse() cho nó hay không -- và bằng cách đó, bạn muốn sắp xếp N chuỗi theo từ điển (vì có N chuỗi, bạn có 2N cách).
+
+Giả sử '1' biểu thị trường hợp bạn áp dụng Reverse() cho mỗi chuỗi và '0' cho trường hợp kia -- sau đó chúng ta sẽ có một chuỗi 0-1 có độ dài N. Chúng tôi gọi các chuỗi như vậy là "Chuỗi đảo ngược".
+
+Ví dụ: giả sử rằng N = 3 và S[1] = "ABC", S[2] = "XC" và S[3] = "DZ".
+
+Đối với chuỗi đảo ngược "000": Ba chuỗi vẫn nguyên trạng ("ABC", "XC" và "DZ"), không được sắp xếp theo từ điển. (S[3] đến trước S[2].)
+Đối với chuỗi đảo chiều "001": Chúng tôi chỉ áp dụng Reverse() cho chuỗi thứ ba và chúng tôi kết thúc với "ABC", "XC" và "ZD" được sắp xếp theo từ điển.
+Đối với chuỗi đảo chiều "010": Chúng tôi chỉ áp dụng Reverse() cho chuỗi thứ hai và chúng tôi kết thúc với "ABC", "CX" và "DZ" được sắp xếp theo từ điển.
+Đối với Chuỗi đảo ngược "101": Chúng tôi chỉ áp dụng Reverse() cho các chuỗi đầu tiên và thứ ba, và chúng tôi kết thúc với "CBA", "XC" và "ZD" được sắp xếp theo từ điển.
+Có những cách khác để sắp xếp các chuỗi này theo thứ tự từ điển.
+
+Cho N chuỗi, tìm một Chuỗi đảo ngược sắp xếp các chuỗi theo thứ tự từ vựng; nếu có nhiều Chuỗi đảo ngược như vậy, hãy tìm một chuỗi xuất hiện theo từ điển trước.
+
+Nhập
+Dòng đầu tiên sẽ chứa số trường hợp thử nghiệm, T.
+
+Đối với mỗi trường hợp thử nghiệm, dòng đầu tiên sẽ chứa N, số lượng chuỗi.
+
+Trong N dòng tiếp theo, mỗi dòng sẽ chứa một chuỗi chỉ bao gồm bảng chữ cái tiếng Anh viết hoa.
+
+Ra
+Đối với mỗi trường hợp thử nghiệm, xuất Chuỗi đảo ngược sắp xếp các chuỗi đã cho theo thứ tự từ vựng; nếu tồn tại nhiều Chuỗi đảo ngược như vậy, hãy xuất ra một chuỗi xuất hiện theo từ điển trước.
+
+Giới hạn
+1 ≤ T ≤ 50
+2 ≤ N ≤ 150
+Chiều dài 2 ≤ (S[i]) ≤ 20
+Đối với mỗi i ≠ j, Reverse(S[i]) ≠ S[j] và S[i] ≠ S[j] luôn giữ.
+Đối với mỗi trường hợp thử nghiệm, luôn tồn tại ít nhất một Chuỗi đảo ngược sắp xếp các chuỗi đầu vào theo thứ tự từ vựng.
+Đầu vào mẫu 1 
+2
+3
+ABC
+ABD
+XY
+3
+ABC
+XC
+DZ
+Đầu ra mẫu 1 
+000
+001
+Gợi ý
+Thứ tự từ vựng: Cho hai chuỗi S và T, nếu S là tiền tố của T hoặc s đến trước t khi s và t là các ký tự đầu tiên của S và T khác nhau, thì S đến trước T.
+
+Giới hạn thời gian
+PyPy3: 2 giây
+Java 11: 2 giây

@@ -1,0 +1,96 @@
+| Mục đích     | Câu lệnh                 |
+| ------------ | ------------------------ |
+| Tạo list     | `arr = [1, 2, 3]`        |
+| Thêm phần tử | `arr.append(x)`          |
+| Sắp xếp tăng | `arr.sort()`             |
+| Sắp xếp giảm | `arr.sort(reverse=True)` |
+| Lấy độ dài   | `len(arr)`               |
+| Duyệt list   | `for x in arr:`          |
+| Cắt list     | `arr[1:4]`               |
+| Đảo list     | `arr[::-1]`              |
+| Tìm max/min  | `max(arr), min(arr)`     |
+set
+| Mục đích         | Câu lệnh     |     |
+| ---------------- | ------------ | --- |
+| Tạo set          | `s = set()`  |     |
+| Thêm phần tử     | `s.add(x)`   |     |
+| Kiểm tra tồn tại | `if x in s:` |     |
+| Giao tập         | `a & b`      |     |
+| Hợp tập          | \`a          | b\` |
+| Hiệu tập         | `a - b`      |     |
+
+DICTIONARY
+my_dict = {
+    "name": "Alice",
+    "age": 20,
+    "city": "Da Nang"
+}
+person = {"name": "Bob", "age": 25}
+print(person["name"])        # 👉 Bob
+person["city"] = "Hanoi"     # thêm mới
+print(person["city"])        # 👉 Hanoi
+
+for person in people:
+    print(person["name"], "-", person["age"])
+
+
+| Mục đích         | Câu lệnh                                            |
+| ---------------- | --------------------------------------------------- |
+| Tạo dict         | `d = {}`                                            |
+| Gán giá trị      | `d['a'] = 10`                                       |
+| Duyệt dict       | `for key, value in d.items():`                      |
+| Kiểm tra tồn tại | `if 'a' in d:`                                      |
+| Đếm tần suất     | `from collections import Counter`<br>`Counter(arr)` |
+
+| Cấu trúc | Lệnh                                                                                     |
+| -------- | ---------------------------------------------------------------------------------------- |
+| Stack    | `stack = []` <br> `stack.append(x)` <br> `stack.pop()`                                   |
+| Queue    | `from collections import deque` <br> `q = deque()` <br> `q.append(x)` <br> `q.popleft()` |
+
+for i in range(n):
+    # lặp từ 0 đến n-1
+
+while điều_kiện:
+    # vòng lặp điều kiện
+
+if x == y:
+    # điều kiện
+elif x > y:
+    # ...
+else:
+    # ...
+# ham tu dinh nghia
+def my_function(x):
+    return x * x
+
+| Thư viện      | Mục đích                                   |
+| ------------- | ------------------------------------------ |
+| `math`        | Các hàm toán học như `sqrt`, `gcd`, `ceil` |
+| `heapq`       | Hàng đợi ưu tiên (min heap)                |
+| `collections` | `Counter`, `deque`, `defaultdict`          |
+| `itertools`   | Tổ hợp, hoán vị                            |
+ 
+ docfile 
+ with open("input.txt", "r") as f:
+    data = f.read()  # đọc toàn bộ nội dung
+    print(data)
+
+#doc tung dong
+with open("input.txt", "r") as f:
+    for line in f:
+        print(line.strip())  # loại bỏ ký tự xuống dòng
+
+with open("output.txt", "w") as f:
+    f.write("Hello, file!\n")
+    f.write("Ghi dòng thứ hai\n")
+
+#ghi nhieu dong 
+lines = ["Dong 1", "Dong 2", "Dong 3"]
+with open("output.txt", "w") as f:
+    for line in lines:
+        f.write(line + "\n")
+
+#doc so
+with open("input.txt", "r") as f:
+    numbers = list(map(int, f.readline().split()))
+    print(numbers)  # [1, 2, 3, 4, 5]

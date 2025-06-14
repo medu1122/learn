@@ -1,0 +1,66 @@
+Problem A - Toy Race 100 PointsFailure
+Time Limit	Memory Limit
+1 second (No Bonus Time)	256 MB
+Description
+You are participating in a toy race featuring toy racing cars, whose racing track is X meters long.
+
+Participants are labeled from 1 to N, and your label is N.
+
+Participant i's toy car's regular speed is V[i] meters per second (m/s), and all toy cars (but yours) always move at the same speed throughout the race.
+
+Your toy car has a special fuel booster (simply, "booster") in it, and it can be configured to move at Z meters per second for the first 1 second of a race (the toy car would then move at V[N] m/s for the remaining distance).
+
+You can set the integer value for Z prior to the race, and this value must be no greater than the maximum speed Y of the booster (that is, Z ≤ Y).
+
+You want to make sure you are the only winner in this race, but you don't want to raise suspicions by using too much of a booster -- hence, you want to find the smallest Z that will let you win the race alone.
+
+For instance, suppose that N = 3, X = 12, Y = 11, and V = [3, 2, 1].
+
+Participant 1's car moves at 3 m/s, and finishes the race in 4 seconds.
+Participant 2's car moves at 2 m/s, and finishes the race in 6 seconds.
+Participant 3 (you) have a couple of options.
+If you don't use the booster at all, your car moves at 1 m/s, and finishes the race in 12 seconds.
+If you use the booster at maximum speed (Z = Y), then your car moves 11 m for the first second, and travels the remaining 1 m for 1 second. You'd win the race alone.
+If you use the booster a bit less with Z = 10, then your care moves 10 m for the first second, and travels the remaining 2 m for 2 seconds. You'd win the race alone.
+If you use the booster a bit less with Z = 9, then you'd finish the race in 4 seconds. There'll be two winners -- participant 1 and participant 3.
+In this example you will need Z ≥ 10 in order to win the race alone, so the answer is 10.
+
+Given N, X, Y, and V[i]'s, compute the smallest integer value Z that allows you to win the race alone.
+
+Input
+The first line will contain T, the number of test cases.
+
+For each test case, the first line will contain N, X, and Y separated by a whitespace.
+
+The second line will contain N integers separated by a whitespace, representing each car's speed (V[i]).
+
+Output
+For each test case, output the smallest Z which is the distance that your car will travel using the booster. 
+
+If you can win the race alone without using the booster, output 0.
+
+If you can't win the race even if you use the booster at maximum capacity, output -1.
+
+Limit
+1 ≤ T ≤ 10
+2 ≤ N ≤ 1,000
+1 ≤ Y ≤ X ≤ 1,000,000
+1 ≤ V[i] ≤ 1,000,000 
+Sample Input 1 
+5
+3 12 11
+3 2 1
+3 12 9
+3 2 1
+3 12 10
+3 4 5
+3 80 80
+80 60 70
+3 80 80
+70 50 60
+Sample Output 1 
+10
+-1
+0
+-1
+72
