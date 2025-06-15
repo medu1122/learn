@@ -47,7 +47,5 @@ for _ in range(T):
     A=list(map(int,input().split()))
     B=list(map(int,input().split()))
     kq.append(count_routes(n,m,x,C,D,A,B))
-
-# In từng kết quả một
 for result in kq:
     print(result)

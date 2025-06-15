@@ -94,3 +94,5 @@ with open("output.txt", "w") as f:
 with open("input.txt", "r") as f:
     numbers = list(map(int, f.readline().split()))
     print(numbers)  # [1, 2, 3, 4, 5]
+
+#api
