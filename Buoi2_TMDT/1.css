@@ -32,4 +32,79 @@ header nav a:hover{
 header nav #home{
     background-color:transparent ;
 }
+.container {
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow:hidden;
+}
+.container a.banner { 
+    width: 100%;
+    height: 40vh;
+    display: block;
+    background-image: url(./img/banner_dienmayxanh.png);
+    background-size: 100% 100%;
+    
+}
+.container .product {
+    background-color: #009bdf;
+    padding: 20px;
+    display: flex;
+    gap: 15px;
+}
+.product a.item-product {
+    width: 17%;
+    height: auto;
+    background-color: white;
+    display:inline-block;
+    padding: 5px;
+    text-decoration: none;
+    padding-bottom: 5%;
+}
+a.item-product p{
+    color: grey;
+    background-color:gainsboro;
+    padding: 2px;
+    display: inline-block;
+    font-size: 13px;
+}
+a.item-product .pic{
+    width: 100%;
+    padding:20px 0;
 
+}
+a.item-product .pic img{
+    width: 100%;
+    transition: 0.3s;
+    
+}
+a.item-product:hover img{
+    transform: translateY(-5px);
+}
+a.item-product .title{
+    color: black;
+    font-size: 17px;
+    margin-bottom: 5px;
+
+}
+a.item-product:hover .title{
+    color: rgb(49, 3, 252);
+}
+a.item-product .price{
+    color: red;
+    font-weight: 700;
+    margin: 5px 0;
+}
+a.item-product .old-price{
+    color: gray;
+    text-decoration: line-through;
+    display: inline-block;
+
+}
+a.item-product span{
+    color: red;
+    padding-left: 3px;
+    font-size: 13px;
+
+}
