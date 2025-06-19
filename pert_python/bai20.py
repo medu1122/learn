@@ -4,3 +4,5 @@
 arr=[-1,5,6,2,-3]
 arr.sort()
 print(arr)
+arr.reverse()
+print(arr)
