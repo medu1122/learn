@@ -4,11 +4,8 @@
 # thứ 5 của danh sách
 
 k=int(input("nhap so can chen:"))
-n=int(input("nhap so phan tu cua mang:"))
-arr=[]
-for i in range(n):
-    arr.insert(i,int(input()))
-print("mang ban dau:",arr)
+
+arr=[12, -14, 11, 91, -3, 10, 7, 15]
 arr.insert(0,k)
 arr.append(k)
 arr.insert(5,k)

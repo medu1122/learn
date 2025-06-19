@@ -17,8 +17,6 @@ def kiemtrasoNTtrongmang(arr):
     for i in range(len(arr)):
         if checkNT(arr[i]):
             print("gia tri:",arr[i]," thuoc vi tri:",i," la so NT \n")
-arr=[]   
-a=int(input("nhap so phan tu cua mang:"))
-for i in range(a):
-    arr.insert(i,int(input()))
+arr=[12, -14, 11, 91, -3, 10, 7, 15]   
+
 kiemtrasoNTtrongmang(arr)

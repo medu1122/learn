@@ -19,10 +19,7 @@ def ChuyenPTDuong(arr):
             arr.insert(0,save)
     return arr
 
-a=[]
-n=int(input("nhap so phan tu cua mang:"))
-for i in range(n):
-    a.insert(i,int(input()))
+a=[12, -14, 11, 91, -3, 10, 7, 15]
 
 ChuyenPTDuong(a)
 print(a)

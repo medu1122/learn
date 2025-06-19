@@ -3,10 +3,9 @@
 # cuối và thứ 5 của danh sách. 
 
 listadd=[1,2,3]
-n=int(input("nhap so phan tu cua mang:"))
-arr=[]
-for i in range(n):
-    arr.insert(i,int(input()))
+
+arr=[[4, 12, -14, 11, 91, 4, -3, 10, 7, 15, 4]]
+
 print("mang ban dau:",arr)
 arr[0:0]=listadd
 arr[5:5]=listadd
