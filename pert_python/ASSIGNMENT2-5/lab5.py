@@ -68,22 +68,22 @@ def display_all_students(student_dict):
         return
     
     print("Danh sach sinh vien:")
-    print(f"{'Ma SV':<10}{'Ten':<20}{'Tuoi':<10}{'Nganh':<20}{'GPA':<10}")
-    print("-" * 70)
+    print("Ma SV | Ten | Tuoi | Nganh | GPA")
+    print("-" * 60)
     for student_id, info in student_dict.items():
-        print(f"{student_id:<10}{info['name']:<20}{info['age']:<10}{info['major']:<20}{info['gpa']:<10}")
+        print(student_id, info['name'], info['age'], info['major'], info['gpa'], sep=" | ")
 
 def find_students_by_major(student_dict):
     major = input("Nhap nganh hoc can tim: ")
     found = False
     
     print(f"Danh sach sinh vien nganh {major}:")
-    print(f"{'Ma SV':<10}{'Ten':<20}{'Tuoi':<10}{'Nganh':<20}{'GPA':<10}")
-    print("-" * 70)
+    print("Ma SV | Ten | Tuoi | Nganh | GPA")
+    print("-" * 60)
     
     for student_id, info in student_dict.items():
         if info["major"].lower() == major.lower():
-            print(f"{student_id:<10}{info['name']:<20}{info['age']:<10}{info['major']:<20}{info['gpa']:<10}")
+            print(student_id, info['name'], info['age'], info['major'], info['gpa'], sep=" | ")
             found = True
     
     if not found:
