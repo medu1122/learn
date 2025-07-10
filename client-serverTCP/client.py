@@ -25,9 +25,9 @@ def udp_client():
             client.settimeout(1)
             data, _ = client.recvfrom(1024)
             end = time.time()
-            rtt = (end - start) * 1000  # ms
+            rtt = (end - start) * 1000  
             print(f"phanhoi: {rtt:.2f} ms")
         except socket.timeout:
             print("Timeout: không nhận được phản hồi.")
-        time.sleep(1)  # Gửi mỗi 1 giây
+        time.sleep(1) 
 udp_client()
